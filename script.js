@@ -104,7 +104,7 @@ function startGame() {
   pauseBtn.style.display = "inline-block";
   stopBtn.style.display = "inline-block";
 
-  // ✅ AUDIO ONBOARDING (IMPORTANT)
+  // AUDIO ONBOARDING
   speak("Welcome to Soundscape Navigator. Use arrow keys to move. Follow the sound to reach the goal. Avoid walls. Press F to pause. Press J to stop the game.");
 }
 
