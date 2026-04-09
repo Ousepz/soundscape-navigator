@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soundscape Navigator</title>
+
+<style>
+  body {
+    background: #121212;
+    color: #fff;
+    font-family: Arial;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 { color: #00f2ff; }
+
+  #map {
+    background: #0a0a0a;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #00f2ff;
+    border-radius: 10px;
+  }
+
+  button {
+    margin: 8px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  #startBtn { background: #00c853; }
+  #pauseBtn { background: #ff9800; }
+  #stopBtn  { background: #d50000; }
+
+  #status { color: #00f2ff; font-weight: bold; }
+</style>
+</head>
+
+<body tabindex="0">
+
+<h1>🎧 Soundscape Navigator</h1>
+
+
+<div id="status" aria-live="polite">
+  Press Start or J to Play
+</div>
+
+
+<div id="level" aria-label="Current game level">
+  Level: 1
+</div>
+
+
+<canvas id="map" width="500" height="500"
+  role="img"
+  aria-label="Maze navigation area where player moves to reach the goal">
+</canvas>
+
+<div>
+  <button id="startBtn" aria-label="Start the game">Start</button>
+
+  <button id="pauseBtn" style="display:none;"
+    aria-label="Pause or resume the game">
+    Pause
+  </button>
+
+  <button id="stopBtn" style="display:none;"
+    aria-label="Stop the game and reset to level one">
+    Stop
+  </button>
+</div>
+
+<p aria-label="Game controls instructions">
+  Use arrow keys to move. Press J to start or stop. Press F to pause. Press H for help.
+</p>
+
+<script src="script.js"></script>
+
+</body>
+</html>
